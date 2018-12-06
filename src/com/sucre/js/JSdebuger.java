@@ -85,7 +85,13 @@ public class JSdebuger extends JFrame {
 				JsUtil.SetJs(js.getText());
 				//JsUtil.AddJs(js.getText());
 				//运行指定function with args and return a reault
-				String ret=JsUtil.runJS(function.getText(),args.getText());
+				String ret="";
+				try {
+					ret=JsUtil.runJS(function.getText(),args.getText());
+				} catch (Exception e2) {
+					result.setText(e2.getMessage());
+				}
+				//String ret=JsUtil.runJS(function.getText(),args.getText());
 				//show the result.
 			    result.setText(ret);
 			    
@@ -114,7 +120,13 @@ public class JSdebuger extends JFrame {
 				// add js code
 				JsUtil.AddJs(tempJs);
 				//run
-				String ret=JsUtil.runJS("get", "");
+				String ret="";
+				try {
+					ret=JsUtil.runJS("get", "");
+				} catch (Exception e2) {
+					result.setText(e2.getMessage());
+				}
+				
 				//replace all the source js code with result.
 				String words=  function.getText() + word + args.getText() ;
 				

@@ -13,7 +13,7 @@ public class JsUtil {
 	public static void loadJs(String fileName) {
 
 		try {
-			// 打开文件读取数据,如出现异常自动释放.
+			// 鎵撳紑鏂囦欢璇诲彇鏁版嵁,濡傚嚭鐜板紓甯歌嚜鍔ㄩ噴鏀�.
 			InputStream in=new FileInputStream(fileName);
 			int len = 0;
 		
@@ -30,28 +30,28 @@ public class JsUtil {
 
 	}
     
-	//动态添加js代码。
+	//鍔ㄦ�佹坊鍔爅s浠ｇ爜銆�
 	public static void AddJs(String js){
 		JS+=js;
 	}
-	//清除所有js代码
+	//娓呴櫎鎵�鏈塲s浠ｇ爜
 	public static void SetJs(String js){
 		
 		JS=js;
 	}
 	/**
-	 * 运行js的方法
+	 * 杩愯js鐨勬柟娉�
 	 * 
 	 * @return
 	 */
-	public static String runJS(String function,Object ... arg) {
+	public static String runJS(String function,Object ... arg) throws Exception {
 		String ret="";
 		ScriptEngineManager sem = new ScriptEngineManager();
 		/*
-		 * sem.getEngineByExtension(String extension)参数为js
-		 * sem.getEngineByMimeType(String mimeType) 参数为application/javascript
-		 * 或者text/javascript sem.getEngineByName(String
-		 * shortName)参数为js或javascript或JavaScript
+		 * sem.getEngineByExtension(String extension)鍙傛暟涓簀s
+		 * sem.getEngineByMimeType(String mimeType) 鍙傛暟涓篴pplication/javascript
+		 * 鎴栬�卼ext/javascript sem.getEngineByName(String
+		 * shortName)鍙傛暟涓簀s鎴杍avascript鎴朖avaScript
 		 */
 		ScriptEngine se = sem.getEngineByName("js");
 		try {
@@ -63,6 +63,7 @@ public class JsUtil {
 			//System.out.println(res);
 		} catch (Exception e) {
 			e.printStackTrace();
+			throw new Exception(e.getMessage());
 		}
 		return ret;
 	}
