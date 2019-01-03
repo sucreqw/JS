@@ -133,6 +133,7 @@ public class JSdebuger extends JFrame {
 				sources=sources.replace(words, ret);
 				System.out.print(word);
 			    }
+
 				source.setText(sources);
 				
 				
