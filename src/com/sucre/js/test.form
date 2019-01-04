@@ -1,29 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.sucre.js.test">
-  <grid id="27dc6" layout-manager="GridLayoutManager" row-count="2" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="jpanle" layout-manager="GridLayoutManager" row-count="2" column-count="6" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="504" height="432"/>
+      <xy x="20" y="20" width="799" height="468"/>
     </constraints>
-    <properties/>
+    <properties>
+      <alignmentX value="1.0"/>
+      <alignmentY value="1.0"/>
+      <autoscrolls value="false"/>
+      <minimumSize width="582" height="386"/>
+      <preferredSize width="582" height="386"/>
+    </properties>
     <border type="none"/>
     <children>
-      <component id="b60c1" class="javax.swing.JButton" binding="runButton" default-binding="true">
+      <component id="f8ed2" class="javax.swing.JButton" binding="runButton" default-binding="true">
         <constraints>
-          <grid row="0" column="2" row-span="2" col-span="1" vsize-policy="0" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="run"/>
+          <text value="Run"/>
         </properties>
       </component>
-      <component id="cc4f2" class="javax.swing.JTextArea" binding="textArea1" default-binding="true">
+      <component id="984" class="javax.swing.JTextArea" binding="source">
         <constraints>
-          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false">
+          <grid row="0" column="0" row-span="1" col-span="6" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="50"/>
           </grid>
         </constraints>
         <properties>
-          <wrapStyleWord value="false"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="15c11" class="javax.swing.JComboBox" binding="mission">
+        <constraints>
+          <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <model>
+            <item value="java"/>
+            <item value="else"/>
+          </model>
         </properties>
       </component>
     </children>
