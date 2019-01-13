@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="JSdebug:jar">
+    <output-path>$PROJECT_DIR$/../runnable</output-path>
+    <root id="archive" name="JS.jar">
+      <element id="module-output" name="JS" />
+    </root>
+  </artifact>
+</component>
