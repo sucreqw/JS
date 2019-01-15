@@ -20,14 +20,14 @@ public class test {
                     case "java" :
                         String sourceText=source.getText();
                         String temp="private byte[] getdata(String cookies, String uid) {\r\n"
-                                  + "    StringBuilder data = new StringBuilder(900);\r\n"
-                                  + "    String temp = \"\";\r\n"
-                                  + "    data.append(\""+sourceText.replace("\n","\");\r\n    data.append(")//")\r\ndata.append("
+                                + "    StringBuilder data = new StringBuilder(900);\r\n"
+                                + "    String temp = \"\";\r\n"
+                                + "    data.append(\""+sourceText.replace("\n","\\r\\n\");\r\n    data.append(\"")//")\r\ndata.append("
 
-                                  + "\")\r\nreturn data.toString().getBytes();\r\n"
-                                  + "}\r\n"
+                                + "\")\r\nreturn data.toString().getBytes();\r\n"
+                                + "}\r\n"
 
-                        ;
+                                ;
                         source.setText(temp);
                         break;
                 }
