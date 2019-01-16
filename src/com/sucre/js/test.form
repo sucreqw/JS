@@ -29,6 +29,9 @@
         <properties>
           <model>
             <item value="java"/>
+            <item value="md5"/>
+            <item value="base64file"/>
+            <item value="url"/>
             <item value="else"/>
           </model>
         </properties>
