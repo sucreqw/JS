@@ -35,14 +35,7 @@ public class test {
                         source.setText(temp);
                         break;
                     case "md5":
-                      /*  Map<String, String> hashmap = new HashMap();
 
-                        hashmap.put("app_id", "2111350163");
-                        hashmap.put("time_stamp", MyUtil.getTime());
-                        hashmap.put("nonce_str", "fa577ce3");
-                        hashmap.put("app_key", "Rfhw1apxn3WQQAfh");
-
-                        System.out.println(hashmap.toString());*/
 
                         String hash = MyUtil.MD5(sourceText);
                         source.setText(sourceText + "\r\n" + hash);
@@ -56,6 +49,10 @@ public class test {
 
                     case "url":
                         ret = URLEncoder.encode(sourceText);
+                        source.setText(sourceText + "\r\n" + ret);
+                        break;
+                    case "unicode" :
+                        ret = MyUtil.decodeUnicode(sourceText);
                         source.setText(sourceText + "\r\n" + ret);
                         break;
                     default:
@@ -79,6 +76,10 @@ public class test {
         });
     }
 
+    /**
+     * 腾讯云api排序规则。
+     * @param map
+     */
     public static void Ksort(Map<String, String> map) {
 
         String sb = "";

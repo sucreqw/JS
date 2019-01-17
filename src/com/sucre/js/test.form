@@ -32,6 +32,7 @@
             <item value="md5"/>
             <item value="base64file"/>
             <item value="url"/>
+            <item value="unicode"/>
             <item value="else"/>
           </model>
         </properties>

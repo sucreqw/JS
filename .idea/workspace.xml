@@ -26,8 +26,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/sucre/js/test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="72" column="4615" selection-start-line="72" selection-start-column="4615" selection-end-line="72" selection-end-column="4615" />
+            <state relative-caret-position="222">
+              <caret line="55" column="66" lean-forward="true" selection-start-line="55" selection-start-column="66" selection-end-line="55" selection-end-column="66" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -70,12 +70,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/com/sucre/js/JSdebuger.java" />
-        <option value="$PROJECT_DIR$/src/com/sucre/js/test.form" />
         <option value="$PROJECT_DIR$/src/com/sucre/js/test.java" />
+        <option value="$PROJECT_DIR$/src/com/sucre/js/test.form" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="11" />
     <option name="y" value="23" />
     <option name="width" value="1890" />
@@ -105,7 +105,7 @@
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="265" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547632935482" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547684645869" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../runnable" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -177,7 +177,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18252000" />
+    <option name="totallyTimeSpent" value="19290000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -189,7 +189,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="11" y="23" width="1890" height="977" extended-state="0" />
+    <frame x="11" y="23" width="1890" height="977" extended-state="1" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2608225" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -246,8 +247,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sucre/js/test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="72" column="4615" selection-start-line="72" selection-start-column="4615" selection-end-line="72" selection-end-column="4615" />
+        <state relative-caret-position="222">
+          <caret line="55" column="66" lean-forward="true" selection-start-line="55" selection-start-column="66" selection-end-line="55" selection-end-column="66" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
