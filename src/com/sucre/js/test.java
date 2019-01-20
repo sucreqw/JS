@@ -71,6 +71,7 @@ public class test {
 
                         System.out.println(ret);
                         System.out.println(ret + "&sign=" + MyUtil.MD5(ret).toUpperCase());
+
                 }
             }
         });
