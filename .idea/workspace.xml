@@ -2,6 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="723fa41a-4b6b-4866-afb0-63be0f9a6697" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/debug.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/com/sucre/js/JSdebuger$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/sucre/js/JSdebuger$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/com/sucre/js/JSdebuger$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/sucre/js/JSdebuger$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/com/sucre/utils/JsUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/sucre/utils/JsUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sucre/js/JSdebuger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sucre/js/JSdebuger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sucre/utils/JsUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sucre/utils/JsUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/temp.js" beforeDir="false" afterPath="$PROJECT_DIR$/temp.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
@@ -16,8 +23,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/sucre/js/JSdebuger.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="140" column="13" lean-forward="true" selection-start-line="140" selection-start-column="13" selection-end-line="140" selection-end-column="13" />
+            <state relative-caret-position="469">
+              <caret line="151" column="5" lean-forward="true" selection-start-line="151" selection-start-column="5" selection-end-line="151" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -25,8 +32,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="11580">
-              <caret line="772" column="40" lean-forward="true" selection-start-line="772" selection-start-column="40" selection-end-line="772" selection-end-column="40" />
+            <state relative-caret-position="470">
+              <caret line="772" column="40" selection-start-line="772" selection-start-column="40" selection-end-line="772" selection-end-column="40" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -37,17 +44,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/temp.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="59">
-              <caret line="175" column="16" selection-start-line="175" selection-start-column="16" selection-end-line="175" selection-end-column="16" />
+            <state relative-caret-position="185">
+              <caret line="14044" column="52" lean-forward="true" selection-start-line="14044" selection-start-column="52" selection-end-line="14044" selection-end-column="52" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/debug.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="177">
+              <caret line="10055" column="93" selection-start-line="10055" selection-start-column="90" selection-end-line="10055" selection-end-column="93" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/sucre/utils/JsUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="349">
+              <caret line="65" column="31" selection-start-line="65" selection-start-column="31" selection-end-line="65" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/sucre/js/test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="72" selection-start-line="72" selection-end-line="72" />
+            <state relative-caret-position="350">
+              <caret line="141" column="44" selection-start-line="141" selection-start-column="44" selection-end-line="141" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -94,6 +119,27 @@
     <findStrings>
       <find>base64</find>
       <find>_0x65f6</find>
+      <find>z1q</find>
+      <find>W0V</find>
+      <find>M0V</find>
+      <find>var h09 = M0V.V0V()[24][35][23];</find>
+      <find>encrypt</find>
+      <find>yf</find>
+      <find>[15][35][23]</find>
+      <find>f7q * (f7q + 1) * f7q % 2 == 0 ?</find>
+      <find>L4</find>
+      <find>e6</find>
+      <find>new Uint32Array(</find>
+      <find>v8Q</find>
+      <find>d1q</find>
+      <find>wf</find>
+      <find>L4</find>
+      <find>wf:</find>
+      <find>'\x77\x66':</find>
+      <find>H5X[T5X]</find>
+      <find>M0V.F1q(1085)</find>
+      <find>stringify</find>
+      <find>w:</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -102,15 +148,17 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/sucre/js/JSdebuger.java" />
         <option value="$PROJECT_DIR$/src/com/sucre/js/test.form" />
         <option value="$PROJECT_DIR$/src/com/sucre/js/test.java" />
         <option value="$PROJECT_DIR$/test.js" />
+        <option value="$PROJECT_DIR$/src/com/sucre/utils/JsUtil.java" />
+        <option value="$PROJECT_DIR$/src/com/sucre/js/JSdebuger.java" />
+        <option value="$PROJECT_DIR$/debug.js" />
         <option value="$PROJECT_DIR$/temp.js" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="11" />
     <option name="y" value="23" />
     <option name="width" value="1890" />
@@ -121,7 +169,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -152,6 +199,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -179,7 +227,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.test">
+  <component name="RunManager" selected="Application.JSdebuger">
     <configuration name="JSdebuger" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sucre.js.JSdebuger" />
       <module name="JS" />
@@ -208,8 +256,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.test" />
         <item itemvalue="Application.JSdebuger" />
+        <item itemvalue="Application.test" />
       </list>
     </recent_temporary>
   </component>
@@ -233,11 +281,12 @@
       <workItem from="1551083551015" duration="1243000" />
       <workItem from="1551747527404" duration="1001000" />
       <workItem from="1551926827775" duration="12441000" />
+      <workItem from="1555032152990" duration="21309000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51863000" />
+    <option name="totallyTimeSpent" value="73172000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -249,9 +298,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="11" y="23" width="1890" height="977" extended-state="1" />
+    <frame x="11" y="23" width="1890" height="977" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2797619" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28246754" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -260,8 +310,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32881355" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32881355" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32919955" />
@@ -294,20 +344,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/jre/lib/ext/nashorn.jar!/jdk/nashorn/api/scripting/NashornScriptEngine.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="320" column="5" lean-forward="true" selection-end-line="494" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sucre/js/JSdebuger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="140" column="13" lean-forward="true" selection-start-line="140" selection-start-column="13" selection-end-line="140" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/util/Date.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3435">
@@ -328,10 +364,48 @@
     <entry file="file://$PROJECT_DIR$/src/com/sucre/js/test.form">
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sucre/js/test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="141" column="44" selection-start-line="141" selection-start-column="44" selection-end-line="141" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sucre/utils/JsUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="65" column="31" selection-start-line="65" selection-start-column="31" selection-end-line="65" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/jre/lib/ext/nashorn.jar!/jdk/nashorn/internal/runtime/ECMAErrors.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1033">
+          <caret line="88" selection-start-line="88" selection-end-line="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/jre/lib/ext/nashorn.jar!/jdk/nashorn/api/scripting/NashornScriptEngine.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="398" selection-start-line="398" selection-end-line="398" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sucre/js/JSdebuger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="151" column="5" lean-forward="true" selection-start-line="151" selection-start-column="5" selection-end-line="151" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11580">
-          <caret line="772" column="40" lean-forward="true" selection-start-line="772" selection-start-column="40" selection-end-line="772" selection-end-column="40" />
+        <state relative-caret-position="470">
+          <caret line="772" column="40" selection-start-line="772" selection-start-column="40" selection-end-line="772" selection-end-column="40" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
@@ -340,18 +414,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/temp.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59">
-          <caret line="175" column="16" selection-start-line="175" selection-start-column="16" selection-end-line="175" selection-end-column="16" />
+        <state relative-caret-position="185">
+          <caret line="14044" column="52" lean-forward="true" selection-start-line="14044" selection-start-column="52" selection-end-line="14044" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sucre/js/test.java">
+    <entry file="file://$PROJECT_DIR$/debug.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="72" selection-start-line="72" selection-end-line="72" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="177">
+          <caret line="10055" column="93" selection-start-line="10055" selection-start-column="90" selection-end-line="10055" selection-end-column="93" />
         </state>
       </provider>
     </entry>

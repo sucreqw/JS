@@ -46,8 +46,8 @@ public class JsUtil {
      *
      * @return
      */
-    public static String runJS(String function, Object... arg) throws Exception {
-        String ret = "";
+    public static Object runJS(String function, Object... arg) throws Exception {
+        Object ret = "";
         ScriptEngineManager sem = new ScriptEngineManager();
         /*
          * sem.getEngineByExtension(String extension)鍙傛暟涓簀s
@@ -61,7 +61,7 @@ public class JsUtil {
             //String script = "function say(t){ return 'hello,'+t; }";
             se.eval(JS);
             Invocable inv2 = (Invocable) se;
-            ret = (String) inv2.invokeFunction(function, arg);
+            ret = inv2.invokeFunction(function, arg);
             //System.out.println(res);
         } catch (Exception e) {
             e.printStackTrace();
