@@ -11,6 +11,7 @@ import java.net.URLEncoder;
 
 import java.security.Timestamp;
 import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
@@ -81,6 +82,19 @@ public class test {
                             source.setText(es.getMessage());
                         }
 
+                        break;
+
+                    case "DateToTimestamp":
+                        //String string = "2016-10-24 21:59:06";
+                        SimpleDateFormat sdf2 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                        try {
+                            Date date=sdf2.parse(sourceText);
+
+                            String stamp=String.valueOf(date.getTime());
+                            source.setText(date.toString()+"\r\n" + stamp );
+                        } catch (ParseException e1) {
+                            e1.printStackTrace();
+                        }
                         break;
                     default:
 

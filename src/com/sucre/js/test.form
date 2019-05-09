@@ -35,6 +35,7 @@
             <item value="unicode"/>
             <item value="else"/>
             <item value="timestampToDate"/>
+            <item value="DateToTimestamp"/>
           </model>
         </properties>
       </component>
