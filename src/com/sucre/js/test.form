@@ -36,6 +36,11 @@
             <item value="else"/>
             <item value="timestampToDate"/>
             <item value="DateToTimestamp"/>
+            <item value="body"/>
+            <item value="header"/>
+            <item value="controller"/>
+            <item value="service"/>
+            <item value="impl"/>
           </model>
         </properties>
       </component>

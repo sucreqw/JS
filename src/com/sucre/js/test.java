@@ -96,6 +96,41 @@ public class test {
                             e1.printStackTrace();
                         }
                         break;
+                    case "body"://okhttp body
+                        String[] bodys=sourceText.split("&");
+                        ret="";
+                        for (String keys:bodys) {
+                            String[] bo=keys.split("=");
+                            String v="";
+                            if(bo.length>1){
+                                v=bo[1];
+                            }
+                            ret+="body.put(\""+ bo[0] +"\",\""+ v +"\");\r\n";
+                        }
+                        source.setText(ret);
+                        break;
+                    case "header" ://okhttp header
+                        String[] header=sourceText.split("\n");
+                        ret="";
+                        for (String keys:header) {
+                            String[] bo=keys.split(":");
+                            String v="";
+                            if(bo.length>1){
+                                v=bo[1];
+                            }
+                            ret+="header.put(\""+ bo[0] +"\",\""+ v +"\");\r\n";
+                        }
+                        source.setText(ret);
+                        break;
+                    case "controller":
+                        source.setText(controller(sourceText));
+                        break;
+                    case "service" :
+                        source.setText(service(sourceText));
+                        break;
+                    case "impl" :
+                        source.setText(impl(sourceText));
+                        break;
                     default:
 
                         Map<String, String> hashmap = new HashMap();
@@ -118,6 +153,156 @@ public class test {
         });
     }
 
+    /**
+     * controller restful风格代码生成
+     * @param data
+     * @return
+     */
+    private String controller(String data){
+        //@RequestMapping("/adAccountcollectDO")
+        String Do=MyUtil.midWord("@RequestMapping(\"/","\")",data).replace("DO","");
+
+       String place="@Autowired\n" +
+               "    private I"+ fristBig(Do)+"Service "+ Do +"Service;\n" +
+               "\n" +
+               "    /**\n" +
+               "     * 对接前端接口，新增一条数据\n" +
+               "     * @param "+ Do +"DTO\n" +
+               "     */\n" +
+               "    @PostMapping(\"/\")\n" +
+               "    public CommonResult<Integer> create(@RequestBody "+ fristBig(Do)+"DTO "+ Do +"DTO) {\n" +
+               "        CommonResult<Integer> result = new CommonResult<>();\n" +
+               "        Integer id = "+ Do+"Service.create("+ Do+"DTO);\n" +
+               "        result.setData(id);\n" +
+               "        return result;\n" +
+               "    }\n" +
+               "/**\n" +
+               "     * 对接前端接口，更新一条数据\n" +
+               "     * @param id\n" +
+               "     * @param "+Do+"DTO\n" +
+               "     */\n"+
+               "    @PutMapping(\"/{id}\")\n" +
+               "    public void update(@PathVariable Integer id, @RequestBody "+ fristBig(Do)+"DTO "+ Do+"DTO) {\n" +
+               "        "+ Do+"Service.update(id, "+ Do+"DTO);\n" +
+               "    }\n" +
+               "/**\n" +
+               "     * 对接前端接口，删除一条数据\n" +
+               "     * @param id\n" +
+               "     */\n"+
+               "    @DeleteMapping(\"/{id}\")\n" +
+               "    public void delete(@PathVariable Integer id) {\n" +
+               "        "+ Do +"Service.delete(id);\n" +
+               "    }\n" +
+               "\n" +
+               "/**\n" +
+               "     * 取指定id的数据\n" +
+               "     * @param id\n" +
+               "     * @return\n" +
+               "     */\n"+
+               "    @GetMapping(\"/{id}\")\n" +
+               "    public CommonResult<"+ fristBig(Do)+"Info> get(@PathVariable Integer id) {\n" +
+               "        CommonResult<"+ fristBig(Do) +"Info> result = new CommonResult<>();\n" +
+               "        "+ fristBig(Do)+"Info "+ Do+"Info = "+ Do +"Service.get(id);\n" +
+               "        result.setData("+ Do +"Info);\n" +
+               "        return result;\n" +
+               "    }\n" +
+               "/**\n" +
+               "     * 取分页面数据。\n" +
+               "     * @param page\n" +
+               "     * @param pageSize\n" +
+               "     * @param query\n" +
+               "     * @return\n" +
+               "     */\n"+
+               "    @GetMapping(\"/page/{page}/{pageSize}\")\n" +
+               "    public CommonResult<Page<"+ fristBig(Do)+"Info>> listPage(@PathVariable Integer page, @PathVariable Integer pageSize, String query) {\n" +
+               "        CommonResult<Page<"+ fristBig(Do)+"Info>> result = new CommonResult<>();\n" +
+               "        Page<"+ fristBig(Do)+"Info> list = "+ Do+"Service.listPage(page, pageSize, query);\n" +
+               "        result.setData(list);\n" +
+               "        return result;\n" +
+               "    }";
+
+
+        return place;
+    }
+
+    /**
+     * impl 服务接口 实现类代码生成
+     * @param data
+     * @return
+     */
+    private String impl(String data){
+        //@RequestMapping("/adAccountcollectDO")
+        String Do=MyUtil.midWord("implements I","Service",data);
+
+        String ret="    @Override\n" +
+                "    public Integer create("+ Do +"DTO "+ fristLow(Do)+"DTO) {\n" +
+                "        "+ Do+"DO "+ fristLow(Do)+"DO = new "+ Do +"DO();\n" +
+                "        BeanUtils.copyProperties("+ fristLow(Do)+"DTO, "+ fristLow(Do)+"DO);\n" +
+                "        baseMapper.insert("+ fristLow(Do)+"DO);\n" +
+                "        return "+ fristLow(Do)+"DO.getId();\n" +
+                "    }\n" +
+                "\n" +
+                "    @Override\n" +
+                "    public void delete(Integer id) {\n" +
+                "        baseMapper.deleteById(id);\n" +
+                "    }\n" +
+                "\n" +
+                "    @Override\n" +
+                "    public void update(Integer id, "+Do+"DTO "+ fristLow(Do)+"DTO) {\n" +
+                "        "+ Do +"DO "+ fristLow(Do)+"DO = baseMapper.selectById(id);\n" +
+                "        if ("+ fristLow(Do)+"DO == null) {\n" +
+                "            return;\n" +
+                "        }\n" +
+                "        BeanUtils.copyProperties("+ fristLow(Do)+"DTO, "+ fristLow(Do)+"DO);\n" +
+                "        baseMapper.updateById("+ fristLow(Do)+"DO);\n" +
+                "    }\n" +
+                "\n" +
+                "    @Override\n" +
+                "    public Page<"+ Do+"Info> listPage(Integer page, Integer pageSize, String query) {\n" +
+                "        QueryWrapper<"+ Do+"DO> wrapper = new QueryWrapper<>();\n" +
+                "        if (StringUtils.isNotBlank(query)) {\n" +
+                "            //wrapper.like(\"card_name\", query);\n" +
+                "        }\n" +
+                "        wrapper.orderByDesc(\"id\");\n" +
+                "        Page<"+ Do+"DO> "+ fristLow(Do)+"DOPage = new Page<>(page, pageSize);\n" +
+                "        return PageUtil.buildPage(baseMapper.selectPage("+ fristLow(Do)+"DOPage, wrapper), "+ Do+"Info.class);\n" +
+                "    }\n" +
+                "\n" +
+                "    @Override\n" +
+                "    public "+ Do+"Info get(Integer id) {\n" +
+                "        "+ Do+"DO "+ fristLow(Do)+"DO = baseMapper.selectById(id);\n" +
+                "        if ("+ fristLow(Do)+"DO == null) {\n" +
+                "            return null;\n" +
+                "        }\n" +
+                "        "+ Do + "Info "+ fristLow(Do)+"Info = new "+ Do+"Info();\n" +
+                "        BeanUtils.copyProperties("+ fristLow(Do)+"DO, "+ fristLow(Do)+"Info);\n" +
+                "        return "+ fristLow(Do)+"Info;\n" +
+                "    }";
+
+        return ret;
+    }
+
+    /**
+     * service服接口代码生成
+     * @param data
+     * @return
+     */
+    private String service(String data){
+        //
+        String Do=MyUtil.midWord("<",">",data).replace("DO","");
+
+        String ret="//新增数据\n"+
+                "Integer create("+fristBig(Do)+"DTO "+ fristLow(Do) +"DTO);\n" +
+                "//删除数据\n" +
+                "    void delete(Integer id);\n" +
+                "//更新数据\n" +
+                "    void update(Integer id, "+ fristBig(Do) +"DTO "+ fristLow(Do)+"DTO);\n" +
+                "//分页数据\n" +
+                "    Page<"+ fristBig(Do)+"Info> listPage(Integer page, Integer pageSize, String query);\n" +
+                "//取指定id数据\n" +
+                "    "+ fristBig(Do) + "Info get(Integer id);";
+        return ret;
+    }
     /**
      * 腾讯云api排序规则。
      *
@@ -157,5 +342,24 @@ public class test {
         frame.pack();
         frame.setVisible(true);
 
+    }
+
+    /**
+     * 首字母大写
+     * @param data
+     * @return
+     */
+    private String fristBig(String data){
+        String ret=data.substring(0,1).toUpperCase()+ data.substring(1);
+        return ret;
+    }
+    /**
+     * 首字母小写
+     * @param data
+     * @return
+     */
+    private String fristLow(String data){
+        String ret=data.substring(0,1).toLowerCase()+ data.substring(1);
+        return ret;
     }
 }
