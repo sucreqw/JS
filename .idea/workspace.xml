@@ -8,12 +8,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="723fa41a-4b6b-4866-afb0-63be0f9a6697" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/JAVAcode_jar2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/JAVAcode_jar2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/JSdebug_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/JSdebug_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/sucre/js/test$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/sucre/js/test$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/com/sucre/js/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/sucre/js/test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sucre/js/test.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sucre/js/test.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/sucre/js/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sucre/js/test.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -147,7 +143,7 @@
       <workItem from="1584854844295" duration="3727000" />
       <workItem from="1584876676603" duration="223000" />
       <workItem from="1585211356935" duration="299000" />
-      <workItem from="1585360184851" duration="6168000" />
+      <workItem from="1585360184851" duration="7533000" />
     </task>
     <servers />
   </component>

@@ -234,47 +234,88 @@ public class test {
         //@RequestMapping("/adAccountcollectDO")
         String Do=MyUtil.midWord("implements I","Service",data);
 
-        String ret="    @Override\n" +
+        String ret=" /**\n" +
+                "     * 具体的接口方法实现，增加一条数据\n" +
+                "     * @param "+ fristLow(Do)+"DTO\n" +
+                "     * @return\n" +
+                "     */\n"+
+                "    @Override\n" +
                 "    public Integer create("+ Do +"DTO "+ fristLow(Do)+"DTO) {\n" +
+                "    //建立一个Vo\n"+
                 "        "+ Do+"DO "+ fristLow(Do)+"DO = new "+ Do +"DO();\n" +
+                "        //把前端提交的DTO 复制到vo用来操作数据库，以清洗无用数据\n"+
                 "        BeanUtils.copyProperties("+ fristLow(Do)+"DTO, "+ fristLow(Do)+"DO);\n" +
+                "        //插入数据\n"+
                 "        baseMapper.insert("+ fristLow(Do)+"DO);\n" +
+                "        //返回新增的id\n"+
                 "        return "+ fristLow(Do)+"DO.getId();\n" +
                 "    }\n" +
-                "\n" +
+                "/**\n" +
+                "     * 删除数据\n" +
+                "     * @param id\n" +
+                "     */\n" +
+
                 "    @Override\n" +
                 "    public void delete(Integer id) {\n" +
                 "        baseMapper.deleteById(id);\n" +
                 "    }\n" +
                 "\n" +
+                "/**\n" +
+                "     * 更新一条数据\n" +
+                "     * @param id\n" +
+                "     * @param "+ fristLow(Do)+"DTO\n" +
+                "     */\n"+
                 "    @Override\n" +
                 "    public void update(Integer id, "+Do+"DTO "+ fristLow(Do)+"DTO) {\n" +
+                "        //先在数据库取出数据，建立VO\n"+
                 "        "+ Do +"DO "+ fristLow(Do)+"DO = baseMapper.selectById(id);\n" +
+                "        //判断数据是否存在，不存在返回null\n"+
                 "        if ("+ fristLow(Do)+"DO == null) {\n" +
                 "            return;\n" +
                 "        }\n" +
+                "        //数据存在，把前端提交上来的DTO 复制到Vo,保存到数据库\n"+
                 "        BeanUtils.copyProperties("+ fristLow(Do)+"DTO, "+ fristLow(Do)+"DO);\n" +
                 "        baseMapper.updateById("+ fristLow(Do)+"DO);\n" +
                 "    }\n" +
                 "\n" +
+                "    /**\n" +
+                "     * 返回分页数据\n" +
+                "     * @param page\n" +
+                "     * @param pageSize\n" +
+                "     * @param query\n" +
+                "     * @return\n" +
+                "     */\n"+
                 "    @Override\n" +
                 "    public Page<"+ Do+"Info> listPage(Integer page, Integer pageSize, String query) {\n" +
+                "        //创建查询器\n"+
                 "        QueryWrapper<"+ Do+"DO> wrapper = new QueryWrapper<>();\n" +
                 "        if (StringUtils.isNotBlank(query)) {\n" +
                 "            //wrapper.like(\"card_name\", query);\n" +
                 "        }\n" +
+                "        //建立排序条件\n"+
                 "        wrapper.orderByDesc(\"id\");\n" +
+                "        //建立分页类\n"+
                 "        Page<"+ Do+"DO> "+ fristLow(Do)+"DOPage = new Page<>(page, pageSize);\n" +
+                "        //把数据装入分页类并返回\n"+
                 "        return PageUtil.buildPage(baseMapper.selectPage("+ fristLow(Do)+"DOPage, wrapper), "+ Do+"Info.class);\n" +
                 "    }\n" +
                 "\n" +
+                " /**\n" +
+                "     * 根据指定id 取数据\n" +
+                "     * @param id\n" +
+                "     * @return\n" +
+                "     */\n"+
                 "    @Override\n" +
                 "    public "+ Do+"Info get(Integer id) {\n" +
+                "        //取出指定id的数据装入Vo\n"+
                 "        "+ Do+"DO "+ fristLow(Do)+"DO = baseMapper.selectById(id);\n" +
+                "        //不存在数据则返回null\n"+
                 "        if ("+ fristLow(Do)+"DO == null) {\n" +
                 "            return null;\n" +
                 "        }\n" +
+                "        //建立info类，返回数据\n"+
                 "        "+ Do + "Info "+ fristLow(Do)+"Info = new "+ Do+"Info();\n" +
+                "        //把数据库取出来的数据装入info类，并返回到前端\n"+
                 "        BeanUtils.copyProperties("+ fristLow(Do)+"DO, "+ fristLow(Do)+"Info);\n" +
                 "        return "+ fristLow(Do)+"Info;\n" +
                 "    }";
